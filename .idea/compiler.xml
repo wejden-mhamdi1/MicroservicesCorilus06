@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="DiscoverServer" />
+        <module name="Corilus" />
+        <module name="Gateway" />
+        <module name="Authentication" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Authentication" target="17" />
+      <module name="ConfigServer" target="17" />
+      <module name="Consultation" target="1.5" />
+      <module name="Corilus" target="17" />
+      <module name="DiscoverServer" target="17" />
+      <module name="Gateway" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Authentication" options="-parameters" />
+      <module name="ConfigServer" options="-parameters" />
+      <module name="Corilus" options="-parameters" />
+      <module name="DiscoverServer" options="-parameters" />
+      <module name="Gateway" options="-parameters" />
+    </option>
+  </component>
+</project>

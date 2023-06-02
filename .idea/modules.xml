@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/authentication-master/Authentication.iml" filepath="$PROJECT_DIR$/authentication-master/Authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringbootCorilusTN-main/Corilus.iml" filepath="$PROJECT_DIR$/SpringbootCorilusTN-main/Corilus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DiscoverServer/DiscoverServer.iml" filepath="$PROJECT_DIR$/DiscoverServer/DiscoverServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway/Gateway.iml" filepath="$PROJECT_DIR$/Gateway/Gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Microservices.iml" filepath="$PROJECT_DIR$/.idea/Microservices.iml" />
+    </modules>
+  </component>
+</project>
