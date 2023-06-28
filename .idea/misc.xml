@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/Gateway/pom.xml" />
         <option value="$PROJECT_DIR$/authentication-master/pom.xml" />
         <option value="$PROJECT_DIR$/SpringbootCorilusTN-main/pom.xml" />
+        <option value="$PROJECT_DIR$/Consultation/pom.xml" />
+        <option value="$PROJECT_DIR$/Facture/pom.xml" />
       </list>
     </option>
   </component>

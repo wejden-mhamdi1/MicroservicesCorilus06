@@ -13,15 +13,19 @@ spring:
       discovery:
         locator:
           enabled: true
-    #  routes:
-     #   - id: auths
-      #    uri: http://localhost:8081
-       #   predicates:
-        #    - Path=/api/v1/auths/**
-        #- id: traitments
-         # uri: http://localhost:8089
-          #predicates:
-           # - Path=/api/v1/traitments/**
+      routes:
+        - id: auths
+          uri: http://localhost:8090
+          predicates:
+           - Path=/api/v1/auth/**
+        - id: traitments
+          uri: http://localhost:8089
+          predicates:
+            - Path=/file/**
+        - id: factures
+          uri: http://localhost:8093
+          predicates:
+            - Path=/facture/**
 
 
 management:

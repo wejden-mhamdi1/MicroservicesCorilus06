@@ -54,12 +54,18 @@ public class AuthenticationController {
     }
     /*
     ici
-    */
+
     @GetMapping("/with-file/{auth-id}")
     public ResponseEntity<FullAuthResponse> findAllSchools(
             @PathVariable("auth-id") Integer authId
     ) {
         return ResponseEntity.ok(service.findSchoolsWithfiles(authId));
     }
-
+*/
+    @GetMapping("/with-files/{user-id}")
+    public ResponseEntity<FullUserResponse> findAllUsers(
+            @PathVariable("user-id") Integer userId
+    ) {
+        return ResponseEntity.ok(service.findUsersWithFiles(userId));
+    }
 }

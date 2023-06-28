@@ -21,5 +21,7 @@ public interface FileService {
     public List<String> uploadFileTW(int fileId) throws Exception;
     List<File> Getall();
 
-    List<File> getallUserBYFile(Integer id);
+
+
+    List<File> findAllFilesByUser(Integer userId);
 }

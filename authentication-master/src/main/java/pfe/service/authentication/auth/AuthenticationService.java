@@ -5,6 +5,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+//import pfe.service.authentication.Client.FileClient;
 import pfe.service.authentication.Client.FileClient;
 import pfe.service.authentication.Email.EmailService;
 import pfe.service.authentication.Email.MailRequest;
@@ -46,7 +47,7 @@ public class AuthenticationService {
                 .lastname(request.getLastname())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(Role.ADMIN)
+                .role(Role.USER)
                 .address(address.getCity())
                 // CurrentDate
                         .createdAt(Utils.getCurrentDate())
@@ -159,9 +160,26 @@ public class AuthenticationService {
         return userRepository.findAll();
     }
 
+
+    public FullUserResponse findUsersWithFiles(Integer userId) {
+        var user = userRepository.findById(userId).orElse(null);
+        if (user == null) {
+            user = User.builder()
+                    .firstname("NOT_FOUND")
+                    .email("NOT_FOUND")
+                    .build();
+        }
+
+        var files = client.findAllFilesByUser(userId);
+        return FullUserResponse.builder()
+                .email(user.getEmail())
+                .password(user.getPassword())
+                .files(files)
+                .build();
+    }
 /*
 ici
-*/
+
     public FullAuthResponse findSchoolsWithfiles(Integer authId) {
         var user = userRepository.findById(authId)
 
@@ -179,4 +197,6 @@ ici
                 .files(files)
                 .build();
     }
+
+ */
 }

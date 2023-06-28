@@ -128,7 +128,7 @@ public ResponseEntity<?> convertir(@RequestParam("file") MultipartFile file) {
     }
     /*
     ici
-    */
+
     @GetMapping("/getFileID/{id}")
     public File getFileID(@PathVariable int id){
         return fileService.getFile(id);
@@ -139,7 +139,13 @@ public ResponseEntity<?> convertir(@RequestParam("file") MultipartFile file) {
     ){
         return ResponseEntity.ok(fileService.getallUserBYFile(id));
     }
-
+  */
+    @GetMapping("/user/{user-id}")
+    public ResponseEntity<List<File>> findAllFiles(
+            @PathVariable("user-id") Integer userId
+    ) {
+        return ResponseEntity.ok(fileService.findAllFilesByUser(userId));
+    }
 }
 
 

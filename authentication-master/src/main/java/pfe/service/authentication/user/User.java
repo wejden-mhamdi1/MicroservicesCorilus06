@@ -15,10 +15,11 @@ import java.util.Collection;
 import java.util.List;
 
 @Data
-@Builder
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.persistence.Entity;
+//import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -24,6 +25,7 @@ public class File {
     private String fileName;
     private boolean essa;
     private int scorefileErr;
+    private Integer userId;
     private String fileType;
     @NonNull
     @Column(name = "keyyy")

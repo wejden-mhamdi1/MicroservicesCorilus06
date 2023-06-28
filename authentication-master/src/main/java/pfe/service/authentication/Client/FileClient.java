@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import pfe.service.authentication.auth.File;
 
 import java.util.List;
-/*
-ici
-*/
-@FeignClient(name = "file-service", url = "${application.config.files-url}")
+
+
+@FeignClient(name = "file", url = "${application.config.traitments-url}")
 public interface FileClient {
-    @GetMapping("/auth/{id}")
-    List<File> fundallfileByAuth(@PathVariable("id") Integer id);
+    @GetMapping("/user/{user-id}")
+    List<File> findAllFilesByUser(@PathVariable("user-id") Integer id);
 }

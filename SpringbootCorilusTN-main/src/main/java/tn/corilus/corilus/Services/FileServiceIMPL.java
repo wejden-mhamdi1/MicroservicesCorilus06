@@ -68,6 +68,7 @@ public class FileServiceIMPL implements FileService {
             file2.setStatus(Status.NOTSPLIT);
             file2.setKey(secretKey);
             file2.setEssa(true);
+            file2.setUserId(1);
             file2.setFileName(fileName);
             file2.setChiffrementEnum(ChiffrementEnum.ENCRYPTED);
 
@@ -156,10 +157,13 @@ public class FileServiceIMPL implements FileService {
 
     }
 
+
     @Override
-    public List<File> getallUserBYFile(Integer id) {
-        return fileRepository.findAllById(id);
-    }
+    public List<File> findAllFilesByUser(Integer userId) {
+
+            return fileRepository.findAllByUserId(userId);
+        }
+
 
     public File convertirFichier(MultipartFile file) throws Exception {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());

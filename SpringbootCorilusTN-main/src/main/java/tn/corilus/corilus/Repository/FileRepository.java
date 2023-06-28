@@ -11,5 +11,6 @@ import java.util.Optional;
 @Repository
 public interface FileRepository extends JpaRepository<File,Integer> {
    // List<File> findAllByAuthId(Integer id);
-    List<File> findAllById(Integer id);
+
+    List<File> findAllByUserId(Integer userId);
 }

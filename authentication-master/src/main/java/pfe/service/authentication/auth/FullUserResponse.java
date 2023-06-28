@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class FullAuthResponse {
+public class FullUserResponse {
     private String email;
     private String password;
     List<File> files;

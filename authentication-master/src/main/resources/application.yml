@@ -20,12 +20,12 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
   jackson:
     serialization:
       fail-on-empty-beans: false
 application:
   config:
-    files-url: http://localhost:8090/api/v1/files
+    traitments-url: http://localhost:8089/file
 
 

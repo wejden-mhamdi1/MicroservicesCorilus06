@@ -10,14 +10,17 @@
         <module name="Corilus" />
         <module name="Gateway" />
         <module name="Authentication" />
+        <module name="Consultation" />
+        <module name="Facture" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Authentication" target="17" />
       <module name="ConfigServer" target="17" />
-      <module name="Consultation" target="1.5" />
+      <module name="Consultation" target="17" />
       <module name="Corilus" target="17" />
       <module name="DiscoverServer" target="17" />
+      <module name="Facture" target="17" />
       <module name="Gateway" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -25,8 +28,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Authentication" options="-parameters" />
       <module name="ConfigServer" options="-parameters" />
+      <module name="Consultation" options="-parameters" />
       <module name="Corilus" options="-parameters" />
       <module name="DiscoverServer" options="-parameters" />
+      <module name="Facture" options="-parameters" />
       <module name="Gateway" options="-parameters" />
     </option>
   </component>
